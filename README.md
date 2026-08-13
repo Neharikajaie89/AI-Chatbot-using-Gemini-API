@@ -1,37 +1,34 @@
 # AI Chatbot using Gemini API
 
-An AI-powered chatbot built using the **Google Gemini API**. This project demonstrates how to integrate Gemini's generative AI capabilities into a chatbot application and interact with users through natural-language conversations.
+A simple AI chatbot built with **Python** and the **Google Gemini API**. This project allows users to interact with Google's Gemini AI model through a command-line or Python-based chatbot application.
 
 ## ✨ Features
 
-* 🤖 AI-powered conversations using Gemini API
-* 💬 Interactive chatbot interface
-* ⚡ Fast responses from Google's Gemini models
+* 🤖 AI-powered chatbot using Gemini API
+* 🐍 Built with Python
+* 💬 Natural-language conversations
 * 🔑 Secure API key configuration using environment variables
-* 🧩 Simple and easy-to-understand project structure
-* 📱 Responsive user interface
+* ⚡ Fast AI-generated responses
+* 🧩 Simple and beginner-friendly implementation
 
 ## 🛠️ Technologies Used
 
-* **Google Gemini API** — AI text generation
-* **JavaScript** — Application logic
-* **HTML/CSS** — User interface
-* **Node.js** — Backend/runtime (if applicable)
+* **Python 3.x**
+* **Google Gemini API**
+* **Google Gen AI Python SDK**
+* **python-dotenv**
 
 ## 📁 Project Structure
 
 ```text
 AI-Chatbot-using-Gemini-API/
 │
-├── index.html
-├── style.css
-├── script.js
+├── main.py
 ├── .env
-├── package.json
+├── .gitignore
+├── requirements.txt
 └── README.md
 ```
-
-> The exact files may vary depending on the implementation of the project.
 
 ## 🚀 Getting Started
 
@@ -42,93 +39,123 @@ git clone https://github.com/your-username/AI-Chatbot-using-Gemini-API.git
 cd AI-Chatbot-using-Gemini-API
 ```
 
-### 2. Install dependencies
-
-If the project uses Node.js:
+### 2. Create a virtual environment
 
 ```bash
-npm install
+python -m venv venv
 ```
 
-### 3. Get a Gemini API Key
+Activate it:
 
-Create an API key through **Google AI Studio**.
+**Windows:**
 
-Store the key in your environment configuration rather than directly committing it to the source code.
+```bash
+venv\Scripts\activate
+```
 
-Example:
+**macOS/Linux:**
+
+```bash
+source venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Get a Gemini API Key
+
+Create a Gemini API key using **Google AI Studio**.
+
+Create a `.env` file in the project directory:
 
 ```env
 GEMINI_API_KEY=your_api_key_here
 ```
 
-### 4. Run the project
-
-Depending on your setup, you can start the application with:
+### 5. Run the chatbot
 
 ```bash
-npm start
+python main.py
 ```
 
-Or open `index.html` in your browser if it is a frontend-only implementation.
+The chatbot will start and you can begin sending messages to the Gemini AI model.
 
 ## 🔐 Environment Variables
 
-Create a `.env` file in the project root:
+The project uses an environment variable to keep the Gemini API key secure.
+
+Example `.env`:
 
 ```env
 GEMINI_API_KEY=your_api_key_here
 ```
 
-**Never commit your API key to GitHub.**
-
-Add `.env` to your `.gitignore`:
+Make sure `.env` is included in `.gitignore`:
 
 ```gitignore
 .env
-node_modules/
+venv/
+__pycache__/
 ```
+
+**Never upload your API key to GitHub or share it publicly.**
 
 ## 💡 How It Works
 
-1. The user enters a message in the chatbot.
-2. The application sends the message to the Gemini API.
-3. Gemini processes the prompt and generates a response.
-4. The response is returned to the application.
-5. The chatbot displays the generated response to the user.
+The chatbot follows a simple workflow:
 
-## 📸 Screenshots
+1. The user enters a message.
+2. Python sends the message to the Gemini API.
+3. Gemini processes the prompt.
+4. The API returns an AI-generated response.
+5. The chatbot displays the response to the user.
+6. The process continues until the user exits the chatbot.
 
-Add screenshots of your chatbot here:
+## 📦 Example `requirements.txt`
 
-```markdown
-![Chatbot Screenshot](screenshots/chatbot.png)
+```text
+google-genai
+python-dotenv
+```
+
+## 🖥️ Example
+
+```text
+You: Hello!
+Gemini: Hello! How can I help you today?
+
+You: Explain Python in simple words.
+Gemini: Python is a beginner-friendly programming language...
 ```
 
 ## 🔮 Future Improvements
 
-* [ ] Add chat history
-* [ ] Add conversation persistence
-* [ ] Add dark/light mode
-* [ ] Support multiple Gemini models
+* [ ] Add a graphical user interface
+* [ ] Store conversation history
 * [ ] Add streaming responses
-* [ ] Improve error handling
-* [ ] Add voice input/output
-* [ ] Deploy the chatbot online
+* [ ] Add voice input and output
+* [ ] Support multiple Gemini models
+* [ ] Add chat export functionality
+* [ ] Deploy the chatbot as a web application
 
 ## 🤝 Contributing
 
 Contributions are welcome!
 
-1. Fork the repository.
+1. Fork this repository.
 2. Create a new branch.
 3. Make your changes.
 4. Commit your changes.
-5. Push the branch.
-6. Open a Pull Request.
+5. Push your branch.
+6. Create a Pull Request.
 
 ## 📄 License
 
 This project is open source and available under the **MIT License**.
 
-⭐ If you find this project useful, consider giving it a star!
+---
+
+⭐ If you found this project useful, consider giving it a star!
